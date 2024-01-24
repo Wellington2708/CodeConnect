@@ -16,6 +16,7 @@
 
 
 <body>
+    
     <div id="root"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"
@@ -28,7 +29,11 @@
         integrity="sha512-EloEMxhHnDVjte/OduE0UfxufBH8ug8MyNzYa7bu77Ad5ewVaNT2coWlB30S1a7XqoeGoCARY/xNl9UxSv79tg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        
+    
+
     <script type="text/babel">
+
 
         function Titulo({children}) {
             return (
@@ -47,15 +52,16 @@
             )
         }
 
-        function CampoDeDigitacao(props) {
+        function CampoDeDigitacao({ label, tipo, placeholder, value, setValor }) {
             return (
                 <div className='form__campo-digitacao'>
-                    <label for={props.for}>{props.label}</label>
-                    <input type={props.type}
-                        placeholder={props.placeholder}
+                    <label for={tipo}>{label}</label>
+                    <input type={tipo}
+                        placeholder={placeholder}
                         required
-                        id={props.email}
-                    />
+                        id={tipo}
+                        value={value}
+                        onChange={(evento) => setValor(evento.target.value)} />
                 </div>
             )
         }
@@ -67,39 +73,49 @@
         }
 
         function PaginaDeLogin() {
+            
+            const [email, setEmail] = React.useState('')
+            const [senha, setSenha] = React.useState('')
+
+            const handleSubmit = (event)=> {
+                event.preventDefault();
+                console.log('email ' + email);
+                console.log(('senha ' + senha));
+            }
+            
+           
+
             return (
+
                 <div className='container-login'>
                     <Imagem url="./img/imagem-login.png" 
                             textoAlternativo="uma mulher negra de cabelos crespos usando óculos e mexendo no computador, também há o logo da codeconnect" />
-                    <section>
-                        <form>
+                            <section>
+                        <form onSubmit={handleSubmit}>
                             <Titulo>Login</Titulo>
-                            <Subtitulo>Boas-vindas! Faça seu login.</Subtitulo >
-                            <CampoDeDigitacao 
-                            for='email'
-                            label='E-mail ou usuário'
-                            type='email'
-                            placeholder='Digite seu e-mail ou usuário' 
-                            id='email'
-                            
+                            <Subtitulo>Boas vindas! Faça o seu login</Subtitulo>
+                            <CampoDeDigitacao label='E-mail ou usuário'
+                                tipo='email'
+                                placeholder='Digite o seu e-mail ou usuário'
+                                value={email}
+                                setValor={setEmail}
                             />
-                            <CampoDeDigitacao 
-                            for='senha'
-                            label='Senha'
-                            type='password'
-                            placeholder='Digite sua senha' 
-                            id='senha'
-                        
+                            <CampoDeDigitacao label='Senha'
+                                tipo='password'
+                                placeholder='Digite a sua senha'
+                                value={senha}
+                                setValor={setSenha}
                             />
                             <Botao type='submit' className='form__botao'>Login</Botao>
                         </form>
                     </section>
                 </div>
+                
             )
         }
 
 
-
+        
         ReactDOM.createRoot(document.getElementById('root')).render(<PaginaDeLogin />)
     </script>
 </body>
