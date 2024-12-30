@@ -1,7 +1,8 @@
-/* Estilos do container principal */
+/* principal container */
+
 .container-login {
     display: flex;
-    background-color: var(--cinza-escuro);
+    background-color: var(--dark-gray);
     padding: 3.5em 5em;
     border-radius: 32px;
     gap: 3em;
@@ -13,44 +14,47 @@
     font-weight: 400;
 }
 
-/* Estilos do titulo */
-.form__titulo {
+/* titles  */
+
+.form__title {
     font-size: 31px;
     font-weight: 600;
 }
 
-/* Estilos do subtitulo */
-.form__texto {
+/* Subtitles */
+
+.form__text {
     margin: 1.5em 0 2.5em 0;
     font-weight: 400;
     font-size: 22px;
 }
 
-/* Estilos do campo de seleção */
-.form__campo-checkbox {
+/* Selection Field */
+
+.form__checkbox-field {
     margin-right: 0.5em;
     width: 20px;
     height: 20px;
     position: relative;
     background-color: none;
-    border: 2px solid var(--cinza-claro);
+    border: 2px solid var(--light-gray);
 }
 
-.form__campo-checkbox label {
+.form__checkbox-field label {
     cursor: pointer;
     position: absolute;
     left: -1px;
     top: -2px;
 }
 
-.form__campo-checkbox label::after {
+.form__checkbox-field label::after {
     content: '';
     width: 7px;
     height: 4px;
     position: absolute;
     top: 4px;
     left: 4px;
-    border: 3px solid var(--verde-destaque);
+    border: 3px solid var(--green-highlight);
     border-top: none;
     border-right: none;
     background: transparent;
@@ -58,47 +62,49 @@
     transform: rotate(-45deg);
 }
 
-.form__campo-checkbox label:hover::after {
+.form__checkbox-field label:hover::after {
     opacity: 0.3;
 }
 
-.form__campo-checkbox input[type=checkbox] {
+.form__checkbox-field input[type=checkbox] {
     visibility: hidden;
 }
 
-.form__campo-checkbox input[type=checkbox]:checked+label::after {
+.form__checkbox-field input[type=checkbox]:checked+label::after {
     opacity: 1;
 }
 
-/* Estilos do botão */
-.form__botao {
+/* Buttons */
+
+.form__button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5em;
-    color: var(--verde-petroleo);
-    background-color: var(--verde-destaque);
+    color: var( --petroleum-green);
+    background-color: var(--green-highlight);
     width: 100%;
     padding: 12px 16px 12px 16px;
     border-radius: 8px;
     border: none;
-    font-family: var(--fonte);
+    font-family: var(--font);
     font-size: 18px;
     font-weight: 600;
     margin: 2em 0;
 }
 
-.form__botao::after {
+.form__button::after {
     content: ' ';
     width: 25px;
     height: 20px;
-    background-image: url('../img/flecha.svg');
+    background-image: url('../img/arrow.svg');
     background-repeat: no-repeat;
     background-size: 1em;
 }
 
-/* Estilos das opções / fieldset */
-.form__opcoes {
+/* Options styles / fieldset */
+
+.form__options {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,32 +113,34 @@
     border: none;
 }
 
-.form__opcoes a {
+.form__options a {
     color: var(--offwhite);
     font-family: Prompt;
     text-align: right;
     font-size: 15px;
 }
 
-/* Estilo do texto do formulário: lembrar-me */
-.form__opcoes-texto {
+/* form's text styles: remember me */
+.form__options-text {
     flex-grow: 2;
 }
 
-/* Estilos do container de links / redes sociais */
+/*  links container/ social media */
+
 .container-links {
     text-align: center;
 }
 
-/* Estilos do titulo do container de links */
-.container-links__titulo {
+/* link container title */
+
+.container-links__title {
     font-size: 15px;
     color: var(--offwhite);
     position: relative;
 }
 
-.container-links__titulo::before,
-.container-links__titulo::after {
+.container-links__title::before,
+.container-links__title::after {
     position: absolute;
     display: inline-block;
     top: 0.7em;
@@ -143,7 +151,7 @@
     background-color: var(--offwhite);
 }
 
-.container-links__titulo::after {
+.container-links__title::after {
     left: initial;
     right: 1em;
 }
@@ -169,16 +177,18 @@
     font-size: 13px;
 }
 
-/* Estilos do texto do container de links */
-.container-links__texto {
+/* link container text */
+
+.container-links__text {
     font-size: 15px;
     color: var(--offwhite);
     margin-bottom: .9em;
 }
 
-/* Estilos do link */
+/* link styles */
+
 .container-links__link {
-    color: var(--verde-destaque);
+    color: var(--green-highlight);
     font-size: 18px;
     text-decoration: none;
 }
@@ -188,7 +198,7 @@
     content: ' ';
     width: 30px;
     height: 20px;
-    background-image: url('../img/prancheta.svg');
+    background-image: url('../img/clipboard.svg');
     background-repeat: no-repeat;
     background-position: center;
 }

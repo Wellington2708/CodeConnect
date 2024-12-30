@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/PaginaDeLogin.css" />
-    <link rel="stylesheet" href="./styles/CampoDeDigitacao.css" />
+    <link rel="stylesheet" href="./styles/loginPage.css" />
+    <link rel="stylesheet" href="./styles/typingField.css" />
     <title>Login | CodeConnect</title>
 </head>
 
@@ -37,12 +37,12 @@
 
         function Titulo({children}) {
             return (
-                <h1 className='form__titulo'>{children}</h1>
+                <h1 className='form__title'>{children}</h1>
             )
         }
         function Subtitulo({children}) {
             return (
-                <h2 className='form__texto'>{children}</h2>
+                <h2 className='form__text'>{children}</h2>
             )
         }
 
@@ -54,7 +54,7 @@
 
         function CampoDeDigitacao({ label, tipo, placeholder, value, setValor }) {
             return (
-                <div className='form__campo-digitacao'>
+                <div className='form__typing-field'>
                     <label for={tipo}>{label}</label>
                     <input type={tipo}
                         placeholder={placeholder}
@@ -76,12 +76,12 @@
         function Checkbox(){
             return (
                 <>
-                    <div className="form__campo-checkbox">
+                    <div className="form__checkbox-field">
                         <input type="checkbox" id="lembrar" />
                         <label for="lembrar"/>
 
                     </div>
-                    <p className="form__opcoes-texto">Lembrar-me</p>
+                    <p className="form__text-options">Lembrar-me</p>
                 </>
             )
         }
@@ -127,7 +127,7 @@
             return (
 
                 <div className='container-login'>
-                    <Imagem url="./img/imagem-login.png" 
+                    <Imagem url="./img/login-image.png" 
                             textoAlternativo="uma mulher negra de cabelos crespos usando óculos e mexendo no computador, também há o logo da codeconnect" />
                             <section>
                         <form onSubmit={handleSubmit}>
@@ -145,21 +145,21 @@
                                 value={senha}
                                 setValor={setSenha}
                             />
-                            <fieldset className="form__opcoes">
+                            <fieldset className="form__options">
                                 <Checkbox />
                                 <p>
                                     <a href="#" aria-label="Recuperar senha esqucida">Esqueci a senha</a>
                                 </p>
                            </fieldset>
-                            <Botao type='submit' className='form__botao'>Login</Botao>
+                            <Botao type='submit' className='form__button'>Login</Botao>
                         </form>
                         <div className="container-links">
-                            <Texto classe="container-links__titulo">ou entre com outras contas</Texto>
+                            <Texto classe="container-links__title">ou entre com outras contas</Texto>
                             <ul>
                                 <ItemRedesSociais link="https://www.github.com" nome="Github"/>
                                 <ItemRedesSociais link="https://google.com" nome="Google" />
                             </ul>
-                            <Texto classe="container-links__texto">Ainda não tem conta?</Texto>
+                            <Texto classe="container-links__text">Ainda não tem conta?</Texto>
                             <Link>Crie seu Cadastro</Link>
 
                         </div>
