@@ -10,11 +10,9 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/loginPage.css" />
     <link rel="stylesheet" href="./styles/typingField.css" />
+    <link rel="shortcut icon" href="./img/symbol.png" type="image/x-icon">
     <title>Login | CodeConnect</title>
 </head>
-
-
-
 <body>
     
     <div id="root"></div>
@@ -30,149 +28,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         
-    
 
-    <script type="text/babel">
-
-
-        function Titulo({children}) {
-            return (
-                <h1 className='form__title'>{children}</h1>
-            )
-        }
-        function Subtitulo({children}) {
-            return (
-                <h2 className='form__text'>{children}</h2>
-            )
-        }
-
-        function Imagem(props){
-            return(
-                <img src={props.url} alt={props.textoAlternativo}/>
-            )
-        }
-
-        function CampoDeDigitacao({ label, tipo, placeholder, value, setValor }) {
-            return (
-                <div className='form__typing-field'>
-                    <label for={tipo}>{label}</label>
-                    <input type={tipo}
-                        placeholder={placeholder}
-                        required
-                        id={tipo}
-                        value={value}
-                        onChange={(evento) => setValor(evento.target.value)} />
-                </div>
-            )
-        }
-
-        function Botao({type, children, className}){
-            return(
-                <button type={type} className={className}>{children}</button>
-            )
-        }
+ <script type="text/babel" src="./index.js">
 
 
-        function Checkbox(){
-            return (
-                <>
-                    <div className="form__checkbox-field">
-                        <input type="checkbox" id="lembrar" />
-                        <label for="lembrar"/>
+    </script> 
 
-                    </div>
-                    <p className="form__text-options">Lembrar-me</p>
-                </>
-            )
-        }
-
-        function Texto({classe, children}){
-            return (
-                <p className={classe}>{children}</p>
-            )
-        }
-
-        function ItemRedesSociais({link, nome}){
-            return(
-                <li>
-                    <a href={link}>
-                        <img src={`./img/${nome}.svg`} alt={`ícone do ${nome}`} />
-                        {nome}
-                    </a>
-                    </li>
-            )
-        }
-
-        function Link({children}){
-            return(
-                <a href="#" className="container-links__link">
-                    {children}
-                </a>
-            )
-        }
-
-        function PaginaDeLogin() {
-            
-            const [email, setEmail] = React.useState('')
-            const [senha, setSenha] = React.useState('')
-
-            const handleSubmit = (event)=> {
-                event.preventDefault();
-                console.log('email ' + email);
-                console.log(('senha ' + senha));
-            }
-            
-           
-
-            return (
-
-                <div className='container-login'>
-                    <Imagem url="./img/login-image.png" 
-                            textoAlternativo="uma mulher negra de cabelos crespos usando óculos e mexendo no computador, também há o logo da codeconnect" />
-                            <section>
-                        <form onSubmit={handleSubmit}>
-                            <Titulo>Login</Titulo>
-                            <Subtitulo>Boas-vindas! Faça o seu login</Subtitulo>
-                            <CampoDeDigitacao label='E-mail ou usuário'
-                                tipo='email'
-                                placeholder='Digite o seu e-mail ou usuário'
-                                value={email}
-                                setValor={setEmail}
-                            />
-                            <CampoDeDigitacao label='Senha'
-                                tipo='password'
-                                placeholder='Digite a sua senha'
-                                value={senha}
-                                setValor={setSenha}
-                            />
-                            <fieldset className="form__options">
-                                <Checkbox />
-                                <p>
-                                    <a href="#" aria-label="Recuperar senha esqucida">Esqueci a senha</a>
-                                </p>
-                           </fieldset>
-                            <Botao type='submit' className='form__button'>Login</Botao>
-                        </form>
-                        <div className="container-links">
-                            <Texto classe="container-links__title">ou entre com outras contas</Texto>
-                            <ul>
-                                <ItemRedesSociais link="https://www.github.com" nome="Github"/>
-                                <ItemRedesSociais link="https://google.com" nome="Google" />
-                            </ul>
-                            <Texto classe="container-links__text">Ainda não tem conta?</Texto>
-                            <Link>Crie seu Cadastro</Link>
-
-                        </div>
-                    </section>
-                </div>
-                
-            )
-        }
-
-
-        
-        ReactDOM.createRoot(document.getElementById('root')).render(<PaginaDeLogin />)
-    </script>
 </body>
 
 </html>
