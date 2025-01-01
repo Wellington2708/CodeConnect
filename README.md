@@ -1,41 +1,31 @@
 
-![Capa do repositório do curso, contendo no canto superior esquerdo o símbolo do github com o texto /alura-cursos, e no direito o logo da alura. Abaixo possuímos o título React: componentes e JSX com o subtítulo aprendendo a construir componentes reutilizáveis. Por fim, no canto inferior direito, há o logo da escola de front-end.](https://imgur.com/n21Gypa.png)
-
 # CodeConnect
 
-Rede social para pessoas desenvolvedoras chamada CodeConnect para o curso de React: componentes e JSX.
+A social network for developers called CodeConnect.
 
-## 🔨 Funcionalidades do projeto
+## 🔨 Project Features
 
-Nesse curso será desenvolvido a página de login da CodeConnect, contendo uma imagem, um formulário de e-mail e senha com títulos e textos, um botão para entrar na aplicação, links para lembrar senha ou cadastrar.
+The CodeConnect login page includes an image, an email and password form with titles and texts, a button to log in, and links to reset the password or register.
 
-## ✔️ Técnicas e tecnologias utilizadas
+## ✔️ Techniques and Technologies Used
 
-As técnicas e tecnologias utilizadas pra isso são:
+The techniques and technologies used are:
 
-- `React`: Biblioteca JavaScript para construção de interfaces de usuário.
-- `React-DOM`: Pacote que permite a integração do React com a árvore de elementos do DOM.
-- `Babel`: Transpilador que converte código JavaScript moderno em versões compatíveis com navegadores mais antigos, além de permitir a interpretação de códigos JSX.
-- `JSX`: Uma extensão de sintaxe para JavaScript usada no React, que permite a escrita de código HTML/XML de forma declarativa e integrada dentro do JavaScript.
-- `Componentização`: Abordagem de design em que a interface de usuário é dividida em componentes reutilizáveis e independentes.
-- `Props`: Dados passados de um componente pai para um componente filho no React.
-- `useState`: Hook no React que permite adicionar estado a componentes funcionais.
-- `Manipulação de eventos`: Ação de responder a interações do usuário, como cliques e teclas pressionadas, em aplicações web.
-
-## 📁 Acesso ao projeto
-
-Você pode [acessar o código fonte do projeto inicial](https://github.com/MonicaHillman/3492-React-componentesi/tree/projeto-base) ou [baixá-lo](https://github.com/MonicaHillman/3492-React-componentes/archive/refs/heads/projeto-base.zip).
+- **React**: A JavaScript library for building user interfaces.
+- **React-DOM**: A package that integrates React with the DOM element tree.
+- **Babel**: A transpiler that converts modern JavaScript code into versions compatible with older browsers, also enabling JSX code interpretation.
+- **JSX**: A JavaScript syntax extension used in React, allowing HTML/XML-like code to be written declaratively within JavaScript.
 
 ## 🎨 Figma
 
-Você pode conferir o Figma da aplicação clicando [aqui](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentização-e-conceitos-básicos-(JSX)).
+You can check the application design on Figma by clicking [here](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentiza%C3%A7%C3%A3o-e-conceitos-b%C3%A1sicos-(JSX)).
 
-## 🛠️ Abrir e rodar o projeto
+## 🛠️ Open and Run the Project
 
-Após baixar o projeto, você pode abrir com o Visual Studio Code. Para isso, na tela inicial da aplicação, vá em File / Arquivos e:
+After downloading the project, you can open it with Visual Studio Code. To do so, in the application's start screen, go to **File** and:
 
-- **Open Folder** (ou alguma opção similar)
-- Procure o local onde o projeto está e o selecione (Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo)
-- Por fim clique em OK
+- **Open Folder** (or a similar option)
+- Locate where the project is stored and select it (If the project is downloaded as a zip file, make sure to extract it first)
+- Finally, click **OK**
 
-Você pode abrir diretamente o arquivo index.html no seu navegador ou usar uma extensão como o ``Live Server``.
+You can either open the `index.html` file directly in your browser or use an extension like `Live Server`. 
