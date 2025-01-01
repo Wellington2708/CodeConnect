@@ -18,7 +18,7 @@ function Image(props){
 function TypingField({ label, type, placeholder, value, setValue }) {
     return (
         <div className='form__typing-field'>
-            <label for={type}>{label}</label>
+            <label htmlFor={type}>{label}</label>
             <input type={type}
                 placeholder={placeholder}
                 required
@@ -41,7 +41,7 @@ function Checkbox(){
         <>
             <div className="form__checkbox-field">
                 <input type="checkbox" id="remember" />
-                <label for="remember"/>
+                <label htmlFor="remember"/>
 
             </div>
             <p className="form__text-options">Remember</p>
@@ -81,8 +81,8 @@ function LoginPage() {
 
     const handleSubmit = (event)=> {
         event.preventDefault();
-        console.log('email ' + email);
-        console.log(('password ' + password));
+        setEmail("");
+        setPassword("");
     }
     
    
@@ -134,4 +134,4 @@ function LoginPage() {
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<LoginPage />)
+ReactDOM.createRoot(document.getElementById("root")).render(<LoginPage />);
